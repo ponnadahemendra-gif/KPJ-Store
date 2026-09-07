@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-row">
+        <a class="brand" href="index.html">← Continue shopping</a>
+      </div>
+      <div class="top-actions">
+        <div class="search-wrap">
+          <input type="search" disabled placeholder="Cart page" />
+          <span class="search-icon">🛒</span>
+        </div>
+        <div class="action-buttons">
+          <a class="icon-btn" href="index.html">🏠</a>
+          <a class="icon-btn" href="my-orders.html">📦</a>
+          <a class="icon-btn" href="login.html">👤</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="cart-layout">
+      <section class="cart-panel">
+        <div class="cart-heading">
+          <h1>Your cart</h1>
+          <p id="cartSummaryText">Review your selected items before checkout.</p>
+        </div>
+
+        <div id="cartItems" class="cart-items"></div>
+
+        <section class="checkout-section">
+          <h2>Delivery & payment</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="customerName">Full name</label>
+              <input id="customerName" class="cart-input" type="text" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+              <label for="customerPhone">Phone number</label>
+              <input id="customerPhone" class="cart-input" type="text" placeholder="+91 98765 43210" />
+            </div>
+            <div class="form-group">
+              <label for="customerEmail">Email address</label>
+              <input id="customerEmail" class="cart-input" type="email" placeholder="name@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="paymentMethod">Payment method</label>
+              <select id="paymentMethod" class="cart-input">
+                <option value="cod">Cash on delivery</option>
+                <option value="upi">UPI</option>
+                <option value="card">Card payment</option>
+              </select>
+            </div>
+            <div class="form-group form-group-wide">
+              <label for="customerAddress">Shipping address</label>
+              <textarea id="customerAddress" class="cart-input" rows="3" placeholder="House number, street, landmark"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="customerCity">City</label>
+              <input id="customerCity" class="cart-input" type="text" placeholder="Delhi" />
+            </div>
+            <div class="form-group">
+              <label for="customerZip">PIN code</label>
+              <input id="customerZip" class="cart-input" type="text" placeholder="110001" />
+            </div>
+            <div class="form-group form-group-wide">
+              <label for="customerNotes">Delivery notes</label>
+              <textarea id="customerNotes" class="cart-input" rows="2" placeholder="Leave at the gate, call on arrival"></textarea>
+            </div>
+          </div>
+          <div id="checkoutError" class="error-text hidden"></div>
+          <div class="order-review">
+            <h3>Review order details</h3>
+            <div id="reviewSummary" class="review-summary">Fill in delivery details to review your order before placing it.</div>
+          </div>
+        </section>
+
+        <div class="cart-footer">
+          <div class="cart-info">
+            <p>Subtotal</p>
+            <p id="cartTotalAmount">₹0</p>
+          </div>
+          <button id="checkoutButton" class="add-btn">Place order</button>
+          <button id="clearCartButton" class="text-button">Clear cart</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

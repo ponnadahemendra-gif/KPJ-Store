@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | KPJ Fashions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-row">
+        <a class="brand" href="index.html">KPJ Fashions</a>
+      </div>
+      <div class="top-actions">
+        <div class="search-wrap">
+          <input type="search" disabled placeholder="Sign in" />
+          <span class="search-icon">👤</span>
+        </div>
+        <div class="action-buttons">
+          <a class="icon-btn" href="index.html">🏠</a>
+          <a class="icon-btn" href="cart.html">🛒</a>
+          <a class="icon-btn" href="my-orders.html">📦</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="auth-page">
+      <section class="auth-panel">
+        <p class="eyebrow">SIGN IN</p>
+        <h1>Welcome back</h1>
+        <p class="auth-copy">Use your phone number or email to receive a secure OTP and quickly sign in.</p>
+
+        <div class="method-switch">
+          <button type="button" class="method-btn active" data-method="phone">Phone</button>
+          <button type="button" class="method-btn" data-method="email">Email</button>
+        </div>
+
+        <div class="auth-field">
+          <label id="inputLabel" for="authInput">Phone number</label>
+          <input id="authInput" class="auth-input" type="text" placeholder="Enter your phone number" />
+        </div>
+
+        <button id="sendOtpButton" class="add-btn">Send OTP</button>
+
+        <div id="otpSection" class="otp-section hidden">
+          <p class="info-text">Enter the OTP we sent to your number/email.</p>
+          <input id="otpInput" class="auth-input" type="text" maxlength="6" placeholder="Enter OTP" />
+          <button id="verifyOtpButton" class="add-btn">Verify OTP</button>
+          <p id="otpStatus" class="info-text"></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

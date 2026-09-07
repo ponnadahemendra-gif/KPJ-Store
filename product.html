@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product detail</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-row">
+        <a class="brand" href="index.html">← Back to shop</a>
+      </div>
+      <div class="top-actions">
+        <a class="icon-btn" href="index.html">🏠</a>
+        <a class="icon-btn" href="cart.html">🛒</a>
+        <a class="icon-btn" href="my-orders.html">📦</a>
+        <a class="icon-btn" href="login.html">👤</a>
+      </div>
+    </header>
+
+    <main class="product-page">
+      <section class="product-detail-panel">
+        <div class="product-gallery">
+          <img id="productImage" src="" alt="Product image" />
+        </div>
+
+        <div class="product-info">
+          <p class="eyebrow" id="productCategory"></p>
+          <h1 id="productTitle">Product Title</h1>
+          <div class="product-meta-row">
+            <div class="rating" id="productRating"></div>
+            <div class="badge" id="productBadge"></div>
+          </div>
+          <p class="product-description" id="productDescription">
+            A premium wardrobe essential with a sharp modern fit.
+          </p>
+          <div class="price-row detail-row">
+            <span class="price-current" id="productPrice"></span>
+            <span class="price-old" id="productOldPrice"></span>
+          </div>
+          <div class="size-block">
+            <p class="filter-title">Size</p>
+            <div class="size-options" id="sizeOptions"></div>
+          </div>
+          <div class="color-block">
+            <p class="filter-title">Color</p>
+            <div class="color-options" id="colorOptions"></div>
+          </div>
+          <div class="tag-list" id="productTags"></div>
+          <button id="productAddButton" class="add-btn">ADD TO BAG</button>
+        </div>
+      </section>
+
+      <section class="product-sections">
+        <div class="product-section">
+          <h2>Product details</h2>
+          <ul id="detailsList" class="detail-list"></ul>
+        </div>
+
+        <div class="product-section">
+          <h2>Reviews</h2>
+          <div id="reviewsList" class="review-list"></div>
+        </div>
+
+        <div class="product-section">
+          <h2>Comments</h2>
+          <div class="comment-form">
+            <textarea id="commentInput" rows="4" placeholder="Write your comment..."></textarea>
+            <button id="commentSubmit" class="add-btn">Submit comment</button>
+          </div>
+          <div id="commentsList" class="comments-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>

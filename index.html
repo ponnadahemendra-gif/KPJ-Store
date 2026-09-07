@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wrogn - View All</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand-row">
+        <button class="menu-btn" aria-label="Open menu">☰</button>
+        <a class="brand" href="index.html">KPJ Fashions</a>
+      </div>
+      <div class="top-actions">
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Search for products..." />
+          <span class="search-icon">🔍</span>
+        </div>
+        <div class="action-buttons">
+          <a class="icon-btn" href="index.html">🏠</a>
+          <a class="icon-btn" href="my-orders.html">📦</a>
+          <a class="icon-btn" href="cart.html">🛒 <span id="cartCount">0</span></a>
+          <a class="icon-btn" href="login.html">👤</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="filters-panel">
+        <div class="panel-heading">
+          <h2>FILTERS</h2>
+          <button id="clearFilters" class="text-button">Clear all</button>
+        </div>
+
+        <div class="filter-block">
+          <p class="filter-title">Quick filters</p>
+          <div class="quick-filters" id="quickFilters">
+            <button data-filter="exclusive">EXCLUSIVE</button>
+            <button data-filter="newdrop">NEW DROP</button>
+            <button data-filter="bestseller">BEST SELLER</button>
+          </div>
+        </div>
+
+        <div class="filter-block">
+          <p class="filter-title">Category</p>
+          <label><input type="checkbox" value="T-Shirts" class="category-filter" /> T-Shirts</label>
+          <label><input type="checkbox" value="Shirts" class="category-filter" /> Shirts</label>
+          <label><input type="checkbox" value="Jeans" class="category-filter" /> Jeans</label>
+          <label><input type="checkbox" value="Jackets" class="category-filter" /> Jackets</label>
+          <label><input type="checkbox" value="Accessories" class="category-filter" /> Accessories</label>
+        </div>
+
+        <div class="filter-block">
+          <p class="filter-title">Price range</p>
+          <label><input type="radio" name="price" value="all" checked /> All</label>
+          <label><input type="radio" name="price" value="0-799" /> Under ₹799</label>
+          <label><input type="radio" name="price" value="800-1499" /> ₹800 - ₹1499</label>
+          <label><input type="radio" name="price" value="1500" /> ₹1500+</label>
+        </div>
+      </aside>
+
+      <section class="content-panel">
+        <div class="page-meta">
+          <div>
+            <p class="eyebrow">VIEW ALL</p>
+            <h1>KPJ COLLECTION</h1>
+            <p id="productCount">0 Products</p>
+          </div>
+          <div class="sort-wrap">
+            <label for="sortSelect">Sort by</label>
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="activeFilters" class="active-filters"></div>
+
+        <div id="productsGrid" class="products-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer-bar">
+      <div class="footer-text">FOR THE RIGHT KIND OF MAN.</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
